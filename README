@@ -1,0 +1,24 @@
+这是一个基于springmvc + hibernate搭建的电影院抢票系统。
+
+主要的技术点有：
+前端：jquery、easyui、jsp、css、js
+后端：maven、springmvc、hibernate、spring email
+数据库：mysql
+
+实现的功能有：
+1）邮箱注册登录
+2）电影名字搜索
+3）电影类别搜索
+4）电影分页显示
+5）电影抢购
+6）邮件提示
+
+项目的总配置文件在 /src/main/resource/syster.properties中，主要是数据库方面的配置。
+
+film_ticket_database.sql是这个小项目的数据库sql文件，总共有4个表，用户表（user）、电影类别表（kind）、电影表（film）和电影抢购表(record),此外，还使用了数据库触发器技术，当抢购了多少张电影票，让数据库自动对电影表中的库存量进行相应的减少。
+
+由于系统并没有部署到服务器上，所以就截取了几张效果图，要部署项目时，只需要几步就可以完成：
+1）mysql新建film_ticket_database数据库，然后运行film_ticket_database.sql文件
+2）导入项目源文件，修改syster.property,然后运行mvc clean install命令即可
+
+
